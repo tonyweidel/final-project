@@ -17,13 +17,17 @@ class Password{
 
   //Static function below this comment.
   static makePrivateKey(){
-    let key = '';
+    let key ='';
     let limit = 14;
     for(let r=0; r<limit; r++){
-      key = String(Math.floor(Math.random()*10));
+      if(r==4||r==9){
+        key += '-';
+      }
+      else{
+        key += String(Math.floor(Math.random()*10));
+      }
     }
     console.log(key);
   }
 }
-let Mitchell = new Password('Give me the sweet release of death');
 Password.makePrivateKey();
