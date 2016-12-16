@@ -17,24 +17,18 @@ class Password{
   validPrivateKey(){
     if(this.privatekey.charAt(4) != '-' || this.privatekey.charAt(9) != '-'){
       return false;
-      console.log(false);
-      console.log("Incorrect Format");
     }
     else if(Number.isNaN(Number(this.privatekey.substring(0,4)))){
       return false;
-      console.log(false);
     }
     else if(Number.isNaN(Number(this.privatekey.substring(5,9)))){
       return false;
-      console.log(false);
     }
     else if(Number.isNaN(Number(this.privatekey.substring(10,14)))){
       return false;
-      console.log(false);
     }
     else{
       return true
-      console.log(true)
     }
   }
   //Static function below this comment.
@@ -49,6 +43,6 @@ class Password{
         key += String(Math.floor(Math.random()*10));
       }
     }
-    console.log(key);
+    return key;
   }
 }

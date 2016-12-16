@@ -27,7 +27,6 @@ class Cart{
        console.log('Your search returned no results.');
      }
    }
-   console.log(subcart);
    return subcart
  }
 }
