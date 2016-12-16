@@ -14,7 +14,29 @@ class Password{
     }
   }
   //Instance functions below this comment.
-
+  validPrivateKey(){
+    if(this.privatekey.charAt(4) != '-' || this.privatekey.charAt(9) != '-'){
+      return false;
+      console.log(false);
+      console.log("Incorrect Format");
+    }
+    else if(Number.isNaN(this.privatekey.substring(0,3))==true){
+      return false;
+      console.log(false);
+    }
+    else if(Number.isNaN(this.privatekey.substring(5,8))==true){
+      return false;
+      console.log(false);
+    }
+    else if(Number.isNaN(this.privatekey.substring(10,13))==true){
+      return false;
+      console.log(false);
+    }
+    else{
+      return true
+      console.log(true)
+    }
+  }
   //Static function below this comment.
   static makePrivateKey(){
     let key ='';
@@ -30,4 +52,6 @@ class Password{
     console.log(key);
   }
 }
+let Mitchell = new Password('1234-1234-1234');
 Password.makePrivateKey();
+console.log(Number.isNaN(true));
