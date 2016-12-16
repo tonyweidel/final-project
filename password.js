@@ -20,15 +20,15 @@ class Password{
       console.log(false);
       console.log("Incorrect Format");
     }
-    else if(Number.isNaN(this.privatekey.substring(0,3))==true){
+    else if(Number.isNaN(Number(this.privatekey.substring(0,4)))){
       return false;
       console.log(false);
     }
-    else if(Number.isNaN(this.privatekey.substring(5,8))==true){
+    else if(Number.isNaN(Number(this.privatekey.substring(5,9)))){
       return false;
       console.log(false);
     }
-    else if(Number.isNaN(this.privatekey.substring(10,13))==true){
+    else if(Number.isNaN(Number(this.privatekey.substring(10,14)))){
       return false;
       console.log(false);
     }
@@ -52,6 +52,6 @@ class Password{
     console.log(key);
   }
 }
-let Mitchell = new Password('1234-1234-1234');
+let Mitchell = new Password("kljasfdkjdsakjds",'7618-7267-9936');
 Password.makePrivateKey();
-console.log(Number.isNaN(true));
+console.log(Mitchell.validPrivateKey());
