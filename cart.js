@@ -23,9 +23,6 @@ class Cart{
        subcart.push(this.itemList[s]);
        subcart.push(this.itemQuantity[s]);
      }
-     else{
-       console.log('Your search returned no results.');
-     }
    }
    return subcart
  }
