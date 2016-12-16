@@ -52,6 +52,3 @@ class Password{
     console.log(key);
   }
 }
-let Mitchell = new Password("kljasfdkjdsakjds",'7618-7267-9936');
-Password.makePrivateKey();
-console.log(Mitchell.validPrivateKey());
